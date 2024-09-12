@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: kubecraftadmin-8-sa
+imagePullSecrets:
+  - name: quay-credentials  
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: kubecraftadmin-8-sa-admin
+subjects:
+- kind: ServiceAccount
+  name: kubecraftadmin-8-sa 
+  namespace: kubecraftadmin-8-develop
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io

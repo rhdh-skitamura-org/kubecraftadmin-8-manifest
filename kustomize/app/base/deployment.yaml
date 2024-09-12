@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubecraftadmin-8
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubecraftadmin-8
+  template:
+    metadata:
+      labels:
+        app: kubecraftadmin-8
+    spec:
+      containers:
+      - name: kubecraftadmin-8
+        image: ___IMAGE_URL___@___IMAGE_DIGEST___ 
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: ns-env
+        volumeMounts:
+        - name: kubeconfig-volume
+          mountPath: "/.kube"
+      volumes:
+      - name: kubeconfig-volume
+        secret:
+          secretName: kubeconfig
+      serviceAccountName: kubecraftadmin-8-sa

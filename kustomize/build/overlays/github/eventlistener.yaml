@@ -1,0 +1,22 @@
+apiVersion: triggers.tekton.dev/v1beta1
+kind: EventListener
+metadata:
+  name: kubecraftadmin-8-listener
+spec:
+  serviceAccountName: trigger-sa 
+  triggers:
+    - bindings:
+        - ref: kubecraftadmin-8-trigger-binding
+      template:
+        ref: kubecraftadmin-8-pipeline-template
+      interceptors:
+      - ref:
+          name: github
+          kind: ClusterInterceptor
+        params:
+        - name: "secretRef"
+          value:
+            secretName: webhooksecret
+            secretKey: webhook_secret
+        - name: "eventTypes"
+          value: ["push"]
