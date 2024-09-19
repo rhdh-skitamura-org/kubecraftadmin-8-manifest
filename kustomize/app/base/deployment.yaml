@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: kubecraftadmin-8
-      kubecraft: true 
+      kubecraft: true
   template:
     metadata:
       labels:
