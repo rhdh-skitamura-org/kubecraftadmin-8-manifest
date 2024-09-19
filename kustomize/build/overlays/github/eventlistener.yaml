@@ -2,6 +2,8 @@ apiVersion: triggers.tekton.dev/v1beta1
 kind: EventListener
 metadata:
   name: kubecraftadmin-8-listener
+  labels:
+    kubecraft: 'true' 
 spec:
   serviceAccountName: trigger-sa 
   triggers:
