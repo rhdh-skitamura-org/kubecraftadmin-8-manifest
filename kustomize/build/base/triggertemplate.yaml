@@ -30,10 +30,10 @@ spec:
               name: build-container
             taskSpec:
               resources:
-                limits:
+                requests:
                   cpu: "2"
                   memory: "1Gi"
-                requests:
+                limits:
                   cpu: "4"
                   memory: "4Gi"
         params:
