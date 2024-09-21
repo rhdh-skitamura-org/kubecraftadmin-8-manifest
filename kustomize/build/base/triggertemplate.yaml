@@ -26,16 +26,11 @@ spec:
           name: kubecraftadmin-8-pipeline
         serviceAccountName: pipeline-sa
         taskRunSpecs:
-          - taskRef:
-              name: build-container
-            taskSpec:
-              resources:
-                requests:
-                  cpu: "2"
-                  memory: "1Gi"
-                limits:
-                  cpu: "4"
-                  memory: "4Gi"
+          - pipelineTaskName: build-container 
+            computeResources:
+              requests:
+                cpu: 2
+                memory: "4Gi"
         params:
           - name: git-url
             value: $(tt.params.git-app-url)
