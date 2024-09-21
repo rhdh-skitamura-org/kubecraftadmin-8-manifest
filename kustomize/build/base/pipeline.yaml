@@ -75,13 +75,14 @@ spec:
     runAfter:
     - git-clone-kubecraftadmin-8
     - git-clone-kubecraftadmin-8-manifests
-    resources:
-      requests:
-        cpu: "2"
-        memory: "1Gi"
-      limits:
-        cpu: "4"
-        memory: "4Gi"
+    taskSpec:
+      resources:
+        requests:
+          cpu: "2"
+          memory: "1Gi"
+        limits:
+          cpu: "4"
+          memory: "4Gi"
     workspaces:
     - name: source
       workspace: shared-workspace
