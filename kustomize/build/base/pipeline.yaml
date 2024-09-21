@@ -77,10 +77,10 @@ spec:
     - git-clone-kubecraftadmin-8-manifests
     resources:
       requests:
-        cpu: "2"   # タスクに対するリクエスト
+        cpu: "2"
         memory: "1Gi"
       limits:
-        cpu: "4"      # タスクに対する制限
+        cpu: "4"
         memory: "4Gi"
     workspaces:
     - name: source
