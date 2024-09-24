@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: ns-env
 data:
-  namespaces: "minecraft-demo-01-develop,kubecraftadmin-8-develop"
+  namespaces: "minecraft"
