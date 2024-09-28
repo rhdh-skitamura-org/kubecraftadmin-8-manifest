@@ -10,6 +10,6 @@ commonLabels:
 namespace: kubecraftadmin-8-develop
 
 images:
-- digest: sha256:5151a91fd7dc2cbae60bc85b2dac4f59ad5b217ac663eab7a088dfa4b82300f6
+- digest: sha256:116b066836c0da60412e88b2b95dc48e31a5bcab7fa41468adf0843686248df3
   name: ___IMAGE_URL___@___IMAGE_DIGEST___
   newName: quay-registry-quay-quay.apps.rosa.rosa-hcp-1544.kfnj.p3.openshiftapps.com/skitamura-quay-org/kubecraftadmin-8-develop/kubecraftadmin-8
