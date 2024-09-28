@@ -7,6 +7,6 @@ resources:
 namespace: kubecraftadmin-8-production
 
 images:
-- digest: sha256:6ff79f939cf4dbfdab3e0771b580ea1138179c71cec5784f0f41533aef60e932
+- digest: sha256:2c58809400617a080bc9c1a4fbe025e8c8fd84dad472c915871c69282429d4cd
   name: ___IMAGE_URL___@___IMAGE_DIGEST___
   newName: quay-registry-quay-quay.apps.rosa.rosa-hcp-1544.kfnj.p3.openshiftapps.com/skitamura-quay-org/kubecraftadmin-8-develop/kubecraftadmin-8
