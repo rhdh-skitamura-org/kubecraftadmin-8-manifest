@@ -91,7 +91,7 @@ spec:
   - name: resync
     params:
       - name: COMPONENT_ID
-        value: kubecraftadmin-8-dev
+        value: kubecraftadmin-8
     runAfter:
       - build-container
     taskRef:
