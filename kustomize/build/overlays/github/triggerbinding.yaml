@@ -5,7 +5,7 @@ metadata:
 spec:
   params:
     - name: git-app-rev
-      value: $(body.head_commit.id)
+      value: develop
     - name: git-app-url
       value: 'https://github.com/rhdh-skitamura-org/kubecraftadmin-8-app'
     - name: git-manifests-url

@@ -17,6 +17,7 @@ resources:
   #- sysdig.yaml
   #- stackrox-scan.yaml
   - argocd-sync.yaml
+  - resync.yaml
   # preparations
   - pipeline-sa.yaml
   - tekton-pvc.yaml
