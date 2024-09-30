@@ -18,6 +18,7 @@ spec:
         image: quay-registry-quay-quay.apps.rosa.rosa-hcp-1544.kfnj.p3.openshiftapps.com/skitamura-quay-org/kubecraftadmin-8-develop/kubecraftadmin-8:latest 
         ports:
         - containerPort: 8000
+        imagePullPolicy: Always
         envFrom:
         - configMapRef:
             name: ns-env
