@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: ns-env
 data:
-  namespaces: "sc-demo-test-25"
+  namespaces: "sc-demo-001"
